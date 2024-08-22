@@ -49,6 +49,7 @@ template<typename T_Point>
 int Udp6_1Parser<T_Point>::ComputeXYZI(LidarDecodedFrame<T_Point> &frame, LidarDecodedPacket<T_Point> &packet) {
   frame.work_mode = packet.work_mode;
   frame.spin_speed = packet.spin_speed;
+  frame.laser_num = packet.laser_num;
   for (int blockid = 0; blockid < packet.block_num; blockid++) {
     // T_Point point;
     int elevation = 0;
@@ -88,6 +89,9 @@ int Udp6_1Parser<T_Point>::ComputeXYZI(LidarDecodedFrame<T_Point> &frame, LidarD
       setIntensity(frame.points[point_index], packet.reflectivities[blockid * packet.laser_num + i]);
       setTimestamp(frame.points[point_index], double(packet.sensor_timestamp) / kMicrosecondToSecond);
       setRing(frame.points[point_index], i);
+      frame.points[point_index].elevation = elevation;
+      frame.points[point_index].azimuth = azimuth;
+      frame.points[point_index].distance = distance;
     }
   }
   frame.points_num += packet.points_num;

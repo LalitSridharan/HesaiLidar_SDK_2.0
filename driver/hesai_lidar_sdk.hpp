@@ -47,7 +47,7 @@ private:
   bool packet_loss_tool_;
 public:
   HesaiLidarSdk() {
-    std::cout << "-------- Hesai Lidar SDK V" << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_TINY << " --------" << std::endl;
+    //std::cout << "-------- Hesai Lidar SDK V" << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_TINY << " --------" << std::endl;
     runing_thread_ptr_ = nullptr;
     lidar_ptr_ = nullptr;
     is_thread_runing_ = false;

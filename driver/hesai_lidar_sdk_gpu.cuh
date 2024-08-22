@@ -49,7 +49,7 @@ private:
 public:
   HesaiLidarSdkGpu()
   {
-    std::cout << "-------- Hesai Lidar SDK Gpu V" << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_TINY << " --------" << std::endl;
+    //std::cout << "-------- Hesai Lidar SDK Gpu V" << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_TINY << " --------" << std::endl;
     runing_thread_ptr_ = nullptr;
     lidar_ptr_ = nullptr;
     is_thread_runing_ = false;

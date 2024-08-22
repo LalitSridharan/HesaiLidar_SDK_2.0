@@ -30,7 +30,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "lidar.h"
 #include <inttypes.h>
 #include <stdio.h>
-#include "Version.h"
+//#include "Version.h"
 #ifndef _MSC_VER
 #include <unistd.h>
 #endif

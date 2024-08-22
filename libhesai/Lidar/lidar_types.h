@@ -99,7 +99,10 @@ typedef struct LidarPointXYZIRT
 {
     float x; 
     float y;             
-    float z;             
+    float z;
+    int elevation;
+    int azimuth;
+    float distance;             
     float intensity;  
     uint16_t ring;
     double timestamp;  
